@@ -1,0 +1,120 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "TiemposText", serif;
+}
+
+nav {
+  width: 100vw;
+  height: auto;
+  position: fixed;
+  z-index: 100;
+  background-color: #ffffff;
+  top: 0;
+}
+nav .logo {
+  width: 96px;
+  height: 36px;
+}
+nav .navigation {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: "Futura", sans-serif;
+}
+nav .navigation .nav-pc {
+  display: none;
+  font-weight: bolder;
+  list-style-type: none;
+}
+@media screen and (min-width: 1280px) {
+  nav .navigation .nav-pc {
+    display: block;
+  }
+}
+nav .navigation .nav-pc .escondido {
+  display: none;
+}
+nav .navigation .push {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+nav .navigation .push a {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+nav .navigation .push a:nth-child(1) {
+  display: none;
+}
+@media screen and (max-width: 1280px) {
+  nav .navigation .push a:nth-child(1) {
+    display: block;
+  }
+}
+nav .navigation .push a:nth-child(3) {
+  margin-left: 15px;
+}
+nav .navigation .push a:nth-child(3) button {
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: transparent;
+  color: none;
+  padding: 0;
+}
+nav .navigation .push a:nth-child(3) button:hover {
+  cursor: pointer;
+}
+nav .navigation .push a:nth-child(3) button span {
+  font-size: 1.5em;
+  font-weight: 750;
+}
+@media screen and (min-width: 1280px) {
+  nav .navigation .push a:nth-child(3) button {
+    display: none;
+  }
+}
+nav .navigation .push .doar {
+  color: #ffffff;
+  background-color: #c8102e;
+  border: none;
+  padding: 1em 1.75em;
+  font-weight: bolder;
+}
+nav .navigation .push .doar:hover {
+  background-color: #e51232;
+  cursor: pointer;
+}
+@media screen and (max-width: 1279px) {
+  nav .navigation .push {
+    margin-left: auto;
+  }
+}
+
+main .titulo_tex {
+  margin-bottom: 2rem;
+  color: #0f1d2b;
+  font-family: serif;
+}
+main .tex_tex {
+  color: #0f1d2b;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+main .gift_button {
+  color: #ffffff;
+  background-color: #c8102e;
+  border: none;
+}
+main .gift_button:hover {
+  background-color: #e51232;
+  cursor: pointer;
+}/*# sourceMappingURL=estilos.css.map */
