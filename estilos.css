@@ -11,6 +11,7 @@ nav {
   z-index: 1000;
   background-color: #ffffff;
   top: 0;
+  border-bottom: 1px solid #e0e0e0;
 }
 nav .logo {
   width: 96px;
@@ -41,6 +42,7 @@ nav .navigation .nav-pc {
   padding: 0;
   list-style-type: none;
   font-weight: bolder;
+  margin: 0 50px;
 }
 nav .navigation .nav-pc a {
   color: #0f1d2b;
@@ -62,11 +64,6 @@ nav .navigation .push {
   align-items: center;
   justify-content: end;
   margin-left: 30px;
-}
-@media screen and (min-width: 1280px) {
-  nav .navigation .push {
-    justify-self: start;
-  }
 }
 @media screen and (max-width: 1279px) {
   nav .navigation .push {
@@ -108,106 +105,87 @@ nav .navigation .push span {
   }
 }
 
-main .container-pop {
-  display: flex;
-  flex-direction: row;
+main {
   width: 100vw;
-  background-color: #c8102e;
-  color: #ffffff;
-  font-size: 1.0625rem;
 }
-main .container-pop .item-pop {
-  display: flex;
-  list-style-type: none;
-  flex-direction: column;
-  padding-left: 20px;
-  width: 90vw;
-}
-main .container-pop .item-pop li {
-  margin: 10px 0;
-}
-main .container-pop .item-pop li:nth-child(1) {
-  font-weight: bolder;
-}
-main .container-pop .item-pop li:nth-child(3) button {
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  background-color: #c8102e;
-  padding: 0.5em 1em;
-  font-weight: bolder;
-}
-main .container-pop .fechar-pop {
-  font-weight: bolder;
-  font-size: 1.2em;
-  margin-top: 17px;
-}
-main .container-pop .fechar-pop:hover {
-  cursor: pointer;
-}
-main .c-hero {
-  align-items: center;
+main .join {
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 1.5rem;
-  position: relative;
-  text-align: right;
-  width: 100vw;
+  align-items: center;
+  flex-wrap: wrap;
 }
-main .tex {
-  align-self: flex-start;
-  bottom: -51px;
-  display: block;
-  margin: 0;
-  padding: 5vw;
-  position: absolute;
-  transform: none;
-  width: 47vw;
-  z-index: 1;
+@media screen and (min-width: 1280px) {
+  main .join {
+    flex-direction: row;
+  }
+}
+main .join .mulher {
+  width: 100%;
+  height: auto;
+  max-width: 912px;
+}
+@media screen and (min-width: 1280px) {
+  main .join .mulher {
+    width: 61%;
+  }
+}
+main .join .gift {
+  z-index: 10;
   background-color: #fff8eb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  max-width: 592px;
+  margin-top: -24px;
+  padding: 4.5%;
 }
-main .titulo_tex {
-  margin-bottom: 2rem;
-  color: #0f1d2b;
-  font-family: "TiemposText", serif;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  flex: 0 1 auto;
-  flex-basis: 65%;
-  -ms-flex-preferred-size: auto;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+@media screen and (min-width: 351px) and (max-width: 799px) {
+  main .join .gift {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
 }
-main .tex_tex {
-  color: #0f1d2b;
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  -webkit-marquee-increment: 0vw;
-  margin: 0 0 1rem;
+@media screen and (max-width: 899px) and (min-width: 800px) {
+  main .join .gift {
+    margin-left: 24px;
+    margin-right: 24px;
+    padding: 3.5%;
+  }
 }
-main .gift_button {
+@media screen and (min-width: 900px) and (max-width: 1279px) {
+  main .join .gift {
+    padding: 28px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  main .join .gift {
+    box-sizing: border-box;
+    position: relative;
+    padding: 88px;
+    order: -1;
+    max-width: 592px;
+    height: 490px;
+    margin-right: -100px;
+    margin-bottom: -24px;
+  }
+}
+main .join .gift h1 {
+  margin-top: 0;
+  font-size: 2.3em;
+}
+main .join .gift p {
+  margin-top: 0;
+  font-size: 1.4em;
+}
+main .join .gift a button {
+  font-size: 1.125em;
   color: #ffffff;
   background-color: #c8102e;
   border: none;
   padding: 1em 1.75em;
   font-weight: bolder;
-}
-main .gift_button:hover {
-  background-color: #e51232;
-  cursor: pointer;
-}
-main .mulher {
-  border: 0;
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-  overflow: clip;
-  --scrollbar-width: 15px;
-  width: 410px;
-  aspect-ratio: auto 410/273;
-  height: 273px;
-  border-style: none;
 }/*# sourceMappingURL=estilos.css.map */
