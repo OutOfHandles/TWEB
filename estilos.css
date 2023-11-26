@@ -121,7 +121,6 @@ body {
   align-items: center;
 }
 .wrapper main .join {
-  max-width: 100%;
   margin-bottom: 80px;
   display: flex;
   flex-direction: column;
