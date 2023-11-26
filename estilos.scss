@@ -101,7 +101,7 @@ body{
             @include flex(column);
             flex-wrap: wrap;
             @media screen and (min-width: 1280px){flex-direction: row;}
-            .mulher{ //arranjar 
+            .mulher{
                 width: 100%;
                 height: auto;
                 max-width: 912px;
