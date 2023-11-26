@@ -1,5 +1,6 @@
 $texto: #0f1d2b;
 $cor: #c8102e;
+$border: #e0e0e0;
 
 @mixin flex($flex-direction){
     display: flex;
@@ -28,7 +29,7 @@ nav{
     z-index: 1000;
     background-color: #ffffff;
     top: 0;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid $border;
     .logo{
         width: 96px;
         height: 36px;
@@ -88,16 +89,20 @@ nav{
 
 main{
     width: 100vw;
+    @include flex(column);
     .join{
-        width: 100vw;
+        margin-bottom: 80px;
         @include flex(column);
         flex-wrap: wrap;
         @media screen and (min-width: 1280px){flex-direction: row;}
-        .mulher{
+        .mulher{ //arranjar 
             width: 100%;
             height: auto;
             max-width: 912px;
-            @media screen and (min-width: 1280px){width: 61%;}
+            max-height: 607px;
+            @media screen and (min-width: 1280px){
+                width: 61vw;
+            }
         }
         .gift{
             z-index: 10;
@@ -120,10 +125,8 @@ main{
             @media screen and (min-width: 1280px){
                 box-sizing: border-box;
                 position:relative;
-                padding: 88px;
                 order: -1;
                 max-width: 592px;
-                height: 490px;
                 margin-right: -100px;
                 margin-bottom: -24px;
             }
@@ -140,6 +143,37 @@ main{
                     font-size: 1.125em;
                     @include butao(1em, 1.75em);
                 }
+            }
+        }
+    }
+    .container-global{
+        @include flex(column);
+        max-width: 1150px;
+        margin-bottom: 80px;
+        @media screen and (min-width: 1280px){
+            border-bottom: 1px solid $border;
+            border-top: 1px solid $border;
+        }
+        h1{
+            width: 70%;
+            text-align: center;
+            font-size: 1.8em;
+            @media screen and (min-width: 1280px){
+                font-size: 2.6em;
+            }
+        }
+        .global{
+            list-style-type: none;
+            @include flex(row);
+            flex-wrap: wrap; 
+            h1{
+                width: fit-content;
+                margin: 0;
+            }
+            li{
+                box-sizing: border-box;
+                padding: 0 32px;
+                width: 25%;
             }
         }
     }

@@ -107,9 +107,13 @@ nav .navigation .push span {
 
 main {
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 main .join {
-  width: 100vw;
+  margin-bottom: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,10 +129,11 @@ main .join .mulher {
   width: 100%;
   height: auto;
   max-width: 912px;
+  max-height: 607px;
 }
 @media screen and (min-width: 1280px) {
   main .join .mulher {
-    width: 61%;
+    width: 61vw;
   }
 }
 main .join .gift {
@@ -165,10 +170,8 @@ main .join .gift {
   main .join .gift {
     box-sizing: border-box;
     position: relative;
-    padding: 88px;
     order: -1;
     max-width: 592px;
-    height: 490px;
     margin-right: -100px;
     margin-bottom: -24px;
   }
@@ -188,4 +191,46 @@ main .join .gift a button {
   border: none;
   padding: 1em 1.75em;
   font-weight: bolder;
+}
+main .container-global {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1150px;
+  margin-bottom: 80px;
+}
+@media screen and (min-width: 1280px) {
+  main .container-global {
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+  }
+}
+main .container-global h1 {
+  width: 70%;
+  text-align: center;
+  font-size: 1.8em;
+}
+@media screen and (min-width: 1280px) {
+  main .container-global h1 {
+    font-size: 2.6em;
+  }
+}
+main .container-global .global {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .container-global .global h1 {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+}
+main .container-global .global li {
+  box-sizing: border-box;
+  padding: 0 32px;
+  width: 25%;
 }/*# sourceMappingURL=estilos.css.map */
