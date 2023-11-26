@@ -4,8 +4,17 @@ body {
   font-family: "TiemposText", serif;
 }
 
-nav {
+.wrapper {
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper nav {
   width: 100vw;
+  max-width: 100%;
   height: auto;
   position: sticky;
   z-index: 1000;
@@ -13,16 +22,16 @@ nav {
   top: 0;
   border-bottom: 1px solid #e0e0e0;
 }
-nav .logo {
+.wrapper nav .logo {
   width: 96px;
   height: 36px;
 }
 @media screen and (min-width: 1280px) {
-  nav .logo {
+  .wrapper nav .logo {
     margin-right: 30px;
   }
 }
-nav .navigation {
+.wrapper nav .navigation {
   padding: 15px;
   display: flex;
   flex-direction: row;
@@ -32,11 +41,11 @@ nav .navigation {
   font-family: "Futura", sans-serif;
 }
 @media screen and (min-width: 1280px) {
-  nav .navigation {
+  .wrapper nav .navigation {
     padding: 25px;
   }
 }
-nav .navigation .nav-pc {
+.wrapper nav .navigation .nav-pc {
   display: none;
   text-indent: 60px;
   padding: 0;
@@ -44,53 +53,52 @@ nav .navigation .nav-pc {
   font-weight: bolder;
   margin: 0 50px;
 }
-nav .navigation .nav-pc a {
+.wrapper nav .navigation .nav-pc a {
   color: #0f1d2b;
   text-decoration: none;
 }
-nav .navigation .nav-pc a:hover {
+.wrapper nav .navigation .nav-pc a:hover {
   color: #c8102e;
 }
 @media screen and (min-width: 1280px) {
-  nav .navigation .nav-pc {
+  .wrapper nav .navigation .nav-pc {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
 }
-nav .navigation .push {
+.wrapper nav .navigation .push {
   display: flex;
   align-items: center;
-  justify-content: end;
   margin-left: 30px;
 }
 @media screen and (max-width: 1279px) {
-  nav .navigation .push {
+  .wrapper nav .navigation .push {
     margin-left: auto;
   }
 }
-nav .navigation .push svg {
+.wrapper nav .navigation .push svg {
   display: none;
 }
 @media screen and (min-width: 1280px) {
-  nav .navigation .push svg {
+  .wrapper nav .navigation .push svg {
     display: block;
     margin-right: 40px;
   }
 }
-nav .navigation .push .doar {
+.wrapper nav .navigation .push .doar {
   color: #ffffff;
   background-color: #c8102e;
   border: none;
   padding: 1em 1.75em;
   font-weight: bolder;
 }
-nav .navigation .push .doar:hover {
+.wrapper nav .navigation .push .doar:hover {
   background-color: #e51232;
   cursor: pointer;
 }
-nav .navigation .push span {
+.wrapper nav .navigation .push span {
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
@@ -100,19 +108,20 @@ nav .navigation .push span {
   margin-left: 10px;
 }
 @media screen and (min-width: 1280px) {
-  nav .navigation .push span {
+  .wrapper nav .navigation .push span {
     display: none;
   }
 }
-
-main {
+.wrapper main {
   width: 100vw;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-main .join {
+.wrapper main .join {
+  max-width: 100%;
   margin-bottom: 80px;
   display: flex;
   flex-direction: column;
@@ -121,22 +130,22 @@ main .join {
   flex-wrap: wrap;
 }
 @media screen and (min-width: 1280px) {
-  main .join {
+  .wrapper main .join {
     flex-direction: row;
   }
 }
-main .join .mulher {
+.wrapper main .join .mulher {
   width: 100%;
   height: auto;
   max-width: 912px;
   max-height: 607px;
 }
 @media screen and (min-width: 1280px) {
-  main .join .mulher {
+  .wrapper main .join .mulher {
     width: 61vw;
   }
 }
-main .join .gift {
+.wrapper main .join .gift {
   z-index: 10;
   background-color: #fff8eb;
   display: flex;
@@ -149,25 +158,25 @@ main .join .gift {
   padding: 4.5%;
 }
 @media screen and (min-width: 351px) and (max-width: 799px) {
-  main .join .gift {
+  .wrapper main .join .gift {
     margin-left: 24px;
     margin-right: 24px;
   }
 }
 @media screen and (max-width: 899px) and (min-width: 800px) {
-  main .join .gift {
+  .wrapper main .join .gift {
     margin-left: 24px;
     margin-right: 24px;
     padding: 3.5%;
   }
 }
 @media screen and (min-width: 900px) and (max-width: 1279px) {
-  main .join .gift {
+  .wrapper main .join .gift {
     padding: 28px;
   }
 }
 @media screen and (min-width: 1280px) {
-  main .join .gift {
+  .wrapper main .join .gift {
     box-sizing: border-box;
     position: relative;
     order: -1;
@@ -176,15 +185,15 @@ main .join .gift {
     margin-bottom: -24px;
   }
 }
-main .join .gift h1 {
+.wrapper main .join .gift h1 {
   margin-top: 0;
   font-size: 2.3em;
 }
-main .join .gift p {
+.wrapper main .join .gift p {
   margin-top: 0;
   font-size: 1.4em;
 }
-main .join .gift a button {
+.wrapper main .join .gift a button {
   font-size: 1.125em;
   color: #ffffff;
   background-color: #c8102e;
@@ -192,45 +201,71 @@ main .join .gift a button {
   padding: 1em 1.75em;
   font-weight: bolder;
 }
-main .container-global {
+.wrapper main .container-global {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 1150px;
   margin-bottom: 80px;
+  padding: 64px 0;
 }
 @media screen and (min-width: 1280px) {
-  main .container-global {
+  .wrapper main .container-global {
     border-bottom: 1px solid #e0e0e0;
     border-top: 1px solid #e0e0e0;
   }
 }
-main .container-global h1 {
+.wrapper main .container-global h1:nth-child(1) {
   width: 70%;
   text-align: center;
   font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 64px;
 }
 @media screen and (min-width: 1280px) {
-  main .container-global h1 {
+  .wrapper main .container-global h1:nth-child(1) {
     font-size: 2.6em;
   }
 }
-main .container-global .global {
+.wrapper main .container-global .global {
+  box-sizing: border-box;
+  padding: 0 20px;
   list-style-type: none;
+  margin: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
-main .container-global .global h1 {
+.wrapper main .container-global .global h1 {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0;
 }
-main .container-global .global li {
+.wrapper main .container-global .global li {
   box-sizing: border-box;
-  padding: 0 32px;
-  width: 25%;
+  width: 50%;
+  padding: 24px;
+  padding-top: 0;
+  font-size: 1.25em;
+}
+@media (min-width: 800px) {
+  .wrapper main .container-global .global li {
+    padding: 32px;
+    padding-top: 0;
+    width: 25%;
+  }
+}
+.wrapper main .container-global .global li p {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+.wrapper main .container-global .global li p span:nth-child(1) {
+  font-size: 2em;
+  font-weight: bolder;
 }/*# sourceMappingURL=estilos.css.map */

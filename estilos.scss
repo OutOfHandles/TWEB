@@ -22,158 +22,189 @@ body{
     margin: 0;
     font-family: "TiemposText",serif;
 }
-nav{
-    width: 100vw;
-    height: auto;
-    position: sticky;
-    z-index: 1000;
-    background-color: #ffffff;
-    top: 0;
-    border-bottom: 1px solid $border;
-    .logo{
-        width: 96px;
-        height: 36px;
-        @media screen and (min-width: 1280px){margin-right: 30px;}
-    }
-    .navigation{
-        padding: 15px;
-        @media screen and (min-width: 1280px){padding: 25px;}
-        @include flex(row);
-        flex-wrap: wrap;
-        font-family: "Futura",sans-serif;
-        .nav-pc{
-            display: none;
-            text-indent: 60px;
-            padding: 0;
-            list-style-type: none;
-            font-weight: bolder;
-            margin: 0 50px;
-            a{
-                color: $texto;
-                text-decoration: none;
-                &:hover{color: $cor;}
-            }
-            @media screen and (min-width: 1280px){@include flex(row);}
-        }
-        .push{
-            display: flex;
-            align-items: center;
-            justify-content: end;
-            margin-left: 30px;
-            @media screen and (max-width:1279px){margin-left: auto;}
-            svg{
-                display: none;
-                @media screen and (min-width: 1280px){
-                    display: block;
-                    margin-right: 40px;
-                }
-            }
-            .doar{
-                @include butao(1em, 1.75em);
-                &:hover{
-                    background-color: #e51232;
-                    cursor: pointer;
-                }
-            }
-            span{
-                width: fit-content;
-                height: fit-content;
-                font-size: 1.5em;
-                font-weight: 750;
-                margin-left: 10px;
-                @media screen and (min-width: 1280px){display: none;}
-            }
-        }
-    }
-}
-
-main{
-    width: 100vw;
+.wrapper{
+    max-width: 100%;
+    box-sizing: border-box;
     @include flex(column);
-    .join{
-        margin-bottom: 80px;
-        @include flex(column);
-        flex-wrap: wrap;
-        @media screen and (min-width: 1280px){flex-direction: row;}
-        .mulher{ //arranjar 
-            width: 100%;
-            height: auto;
-            max-width: 912px;
-            max-height: 607px;
-            @media screen and (min-width: 1280px){
-                width: 61vw;
-            }
+    nav{
+        width: 100vw;
+        max-width: 100%;
+        height: auto;
+        position: sticky;
+        z-index: 1000;
+        background-color: #ffffff;
+        top: 0;
+        border-bottom: 1px solid $border;
+        .logo{
+            width: 96px;
+            height: 36px;
+            @media screen and (min-width: 1280px){margin-right: 30px;}
         }
-        .gift{
-            z-index: 10;
-            background-color: #fff8eb;
-            @include flex(column);
-            align-items: flex-start;
-            max-width: 592px;
-            margin-top: -24px;
-            padding: 4.5%;
-            @media screen and (min-width: 351px) and (max-width: 799px){
-                margin-left: 24px;
-                margin-right: 24px;
+        .navigation{
+            padding: 15px;
+            @media screen and (min-width: 1280px){padding: 25px;}
+            @include flex(row);
+            flex-wrap: wrap;
+            font-family: "Futura",sans-serif;
+            .nav-pc{
+                display: none;
+                text-indent: 60px;
+                padding: 0;
+                list-style-type: none;
+                font-weight: bolder;
+                margin: 0 50px;
+                a{
+                    color: $texto;
+                    text-decoration: none;
+                    &:hover{color: $cor;}
+                }
+                @media screen and (min-width: 1280px){@include flex(row);}
             }
-            @media screen and (max-width:899px) and (min-width:800px){
-                margin-left: 24px;
-                margin-right: 24px;
-                padding: 3.5%;
-            }
-            @media screen and (min-width:900px) and (max-width: 1279px){padding: 28px;}
-            @media screen and (min-width: 1280px){
-                box-sizing: border-box;
-                position:relative;
-                order: -1;
-                max-width: 592px;
-                margin-right: -100px;
-                margin-bottom: -24px;
-            }
-            h1{
-                margin-top: 0;
-                font-size: 2.3em;
-            }
-            p{
-                margin-top: 0;
-                font-size: 1.4em
-            }
-            a{
-                button{
-                    font-size: 1.125em;
+            .push{
+                display: flex;
+                align-items: center;
+
+                margin-left: 30px;
+                @media screen and (max-width:1279px){margin-left: auto;}
+                svg{
+                    display: none;
+                    @media screen and (min-width: 1280px){
+                        display: block;
+                        margin-right: 40px;
+                    }
+                }
+                .doar{
                     @include butao(1em, 1.75em);
+                    &:hover{
+                        background-color: #e51232;
+                        cursor: pointer;
+                    }
+                }
+                span{
+                    width: fit-content;
+                    height: fit-content;
+                    font-size: 1.5em;
+                    font-weight: 750;
+                    margin-left: 10px;
+                    @media screen and (min-width: 1280px){display: none;}
                 }
             }
         }
     }
-    .container-global{
+    main{
+        width: 100vw;
+        max-width: 100%;
         @include flex(column);
-        max-width: 1150px;
-        margin-bottom: 80px;
-        @media screen and (min-width: 1280px){
-            border-bottom: 1px solid $border;
-            border-top: 1px solid $border;
+        .join{
+            max-width: 100%;
+            margin-bottom: 80px;
+            @include flex(column);
+            flex-wrap: wrap;
+            @media screen and (min-width: 1280px){flex-direction: row;}
+            .mulher{ //arranjar 
+                width: 100%;
+                height: auto;
+                max-width: 912px;
+                max-height: 607px;
+                @media screen and (min-width: 1280px){
+                    width: 61vw;
+                }
+            }
+            .gift{
+                z-index: 10;
+                background-color: #fff8eb;
+                @include flex(column);
+                align-items: flex-start;
+                max-width: 592px;
+                margin-top: -24px;
+                padding: 4.5%;
+                @media screen and (min-width: 351px) and (max-width: 799px){
+                    margin-left: 24px;
+                    margin-right: 24px;
+                }
+                @media screen and (max-width:899px) and (min-width:800px){
+                    margin-left: 24px;
+                    margin-right: 24px;
+                    padding: 3.5%;
+                }
+                @media screen and (min-width:900px) and (max-width: 1279px){padding: 28px;}
+                @media screen and (min-width: 1280px){
+                    box-sizing: border-box;
+                    position:relative;
+                    order: -1;
+                    max-width: 592px;
+                    margin-right: -100px;
+                    margin-bottom: -24px;
+                }
+                h1{
+                    margin-top: 0;
+                    font-size: 2.3em;
+                }
+                p{
+                    margin-top: 0;
+                    font-size: 1.4em
+                }
+                a{
+                    button{
+                        font-size: 1.125em;
+                        @include butao(1em, 1.75em);
+                    }
+                }
+            }
         }
-        h1{
-            width: 70%;
-            text-align: center;
-            font-size: 1.8em;
+        .container-global{
+            @include flex(column);
+            max-width: 1150px;
+            margin-bottom: 80px;
+            padding: 64px 0;
             @media screen and (min-width: 1280px){
-                font-size: 2.6em;
+                border-bottom: 1px solid $border;
+                border-top: 1px solid $border;
             }
-        }
-        .global{
-            list-style-type: none;
-            @include flex(row);
-            flex-wrap: wrap; 
-            h1{
-                width: fit-content;
-                margin: 0;
+            h1:nth-child(1){
+                width: 70%;
+                text-align: center;
+                font-size: 1.8em;
+                margin-top: 0;
+                margin-bottom: 64px;
+                @media screen and (min-width: 1280px){
+                    font-size: 2.6em;
+                }
             }
-            li{
+            .global{
                 box-sizing: border-box;
-                padding: 0 32px;
-                width: 25%;
+                padding: 0 20px;
+                list-style-type: none;
+                margin: 0;
+                @include flex(row);
+                align-items: flex-start;
+                flex-wrap: wrap; 
+                h1{
+                    width: fit-content;
+                    margin: 0;
+                }
+                li{
+                    box-sizing: border-box;
+                    width: 50%;
+                    padding: 24px;
+                    padding-top: 0;
+                    font-size: 1.25em;
+                    @media (min-width: 800px){
+                        padding: 32px;
+                        padding-top: 0;
+                        width: 25%;
+                    }
+                    p{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: baseline;
+                        justify-content: flex-start;
+                        span:nth-child(1){
+                            font-size: 2em;
+                            font-weight: bolder;
+                        }
+                    }
+                }
             }
         }
     }
