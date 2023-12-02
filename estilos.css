@@ -199,6 +199,10 @@ body {
   padding: 1em 1.75em;
   font-weight: bolder;
 }
+.wrapper main .join .gift a button:hover {
+  background-color: #e51232;
+  cursor: pointer;
+}
 .wrapper main .container-global {
   display: flex;
   flex-direction: column;
@@ -206,7 +210,11 @@ body {
   align-items: center;
   max-width: 1150px;
   margin-bottom: 80px;
-  padding: 64px 0;
+}
+@media (min-width: 700px) {
+  .wrapper main .container-global {
+    padding: 64px 0;
+  }
 }
 @media screen and (min-width: 1280px) {
   .wrapper main .container-global {
@@ -266,4 +274,92 @@ body {
 .wrapper main .container-global .global li p span:nth-child(1) {
   font-size: 2em;
   font-weight: bolder;
+  margin-right: 10px;
+}
+.wrapper main .featured {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.wrapper main .featured h1:nth-child(1) {
+  margin-top: 0;
+  margin-bottom: 80px;
+}
+@media (min-width: 750px) {
+  .wrapper main .featured h1:nth-child(1) {
+    font-size: 2.5em;
+  }
+}
+.wrapper main .featured .featured-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 750px) {
+  .wrapper main .featured .featured-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 50px;
+  }
+}
+.wrapper main .featured .featured-content .f-hover {
+  text-decoration: none;
+  color: #0f1d2b;
+}
+.wrapper main .featured .featured-content .f-hover:hover h2 {
+  color: #c8102e;
+  font-weight: bolder;
+}
+.wrapper main .featured .featured-content .f-items {
+  margin-bottom: 100px;
+  align-items: flex-start;
+  padding: 0 24px;
+}
+@media (min-width: 750px) {
+  .wrapper main .featured .featured-content .f-items {
+    max-width: 357px;
+  }
+}
+.wrapper main .featured .featured-content .f-items img {
+  width: 100%;
+  height: auto;
+}
+.wrapper main .featured .featured-content .f-items p:nth-child(2) {
+  margin-bottom: 0;
+}
+.wrapper main .featured .featured-content .f-items p:nth-child(4) {
+  font-size: 1.35em;
+  margin-top: 0;
+}
+.wrapper main .featured .featured-content .f-items a {
+  z-index: 10;
+}
+.wrapper main .featured .featured-content .f-items a button {
+  border: none;
+  background-color: transparent;
+  font-size: 1em;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0;
+}
+.wrapper main .featured .featured-content .f-items a button:hover {
+  cursor: pointer;
+}
+.wrapper main .featured .featured-content .f-items a button span:nth-child(1) {
+  font-size: 0.9em;
+  font-weight: bolder;
+  display: none;
+}
+@media (min-width: 750px) {
+  .wrapper main .featured .featured-content .f-items a button span:nth-child(1) {
+    display: inline-block;
+    font-size: 1em;
+  }
+}
+.wrapper main .featured .featured-content .f-items a button span:nth-child(2) {
+  font-size: 1.5em;
 }/*# sourceMappingURL=estilos.css.map */

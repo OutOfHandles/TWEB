@@ -144,6 +144,10 @@ body{
                 }
                 a{
                     button{
+                        &:hover{
+                            background-color: #e51232;
+                            cursor: pointer;
+                        }
                         font-size: 1.125em;
                         @include butao(1em, 1.75em);
                     }
@@ -154,7 +158,7 @@ body{
             @include flex(column);
             max-width: 1150px;
             margin-bottom: 80px;
-            padding: 64px 0;
+            @media (min-width: 700px){padding: 64px 0;}
             @media screen and (min-width: 1280px){
                 border-bottom: 1px solid $border;
                 border-top: 1px solid $border;
@@ -200,7 +204,76 @@ body{
                         span:nth-child(1){
                             font-size: 2em;
                             font-weight: bolder;
+                            margin-right: 10px;
                         }
+                    }
+                }
+            }
+        }
+        .featured{
+            @include flex(column);
+            width: 100%;
+            h1:nth-child(1){
+                @media (min-width: 750px){font-size: 2.5em;}
+                margin-top: 0;
+                margin-bottom: 80px;
+            }
+            .featured-content{
+                @include flex(column);
+                @media (min-width: 750px){
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(2, auto);
+                    row-gap: 50px;
+                }
+                .f-hover{
+                    text-decoration: none;
+                    color: $texto;
+                    &:hover h2{
+                        color: $cor;
+                        font-weight: bolder;
+                    }
+                }
+                .f-items{
+                    margin-bottom: 100px;
+                    align-items: flex-start;
+                    padding: 0 24px;
+                    @media (min-width: 750px){max-width: 357px;}
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                    p:nth-child(2){
+                        margin-bottom: 0;
+                    }
+                    p:nth-child(4){
+                        font-size: 1.35em;
+                        margin-top: 0;
+                    }
+                    a{
+                        z-index: 10;
+                        button{
+                            border: none;
+                            background-color: transparent;
+                            font-size: 1em;
+                            width: fit-content;
+                            padding: 0;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                            span:nth-child(1){
+                                font-size: 0.9em;
+                                font-weight: bolder;
+                                display: none;
+                                @media (min-width: 750px){
+                                    display: inline-block;
+                                    font-size: 1em;
+                                }
+                            }
+                            span:nth-child(2){
+                                font-size: 1.5em;
+                            }
+                        }  
                     }
                 }
             }
