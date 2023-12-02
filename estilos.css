@@ -211,7 +211,7 @@ body {
   max-width: 1150px;
   margin-bottom: 80px;
 }
-@media (min-width: 700px) {
+@media (min-width: 750px) {
   .wrapper main .container-global {
     padding: 64px 0;
   }
@@ -282,6 +282,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-bottom: 80px;
 }
 .wrapper main .featured h1:nth-child(1) {
   margin-top: 0;
@@ -362,4 +363,27 @@ body {
 }
 .wrapper main .featured .featured-content .f-items a button span:nth-child(2) {
   font-size: 1.5em;
+}
+.wrapper main .featured .see-stories button {
+  font-size: 1.125em;
+  color: #ffffff;
+  background-color: #c8102e;
+  border: none;
+  padding: 1em 1.75em;
+  font-weight: bolder;
+  background-color: #18a1c3;
+  padding: 5px 15px;
+}
+.wrapper main .featured .see-stories button span {
+  font-size: 2em;
+}
+.wrapper main .featured .border1 {
+  width: 50%;
+  padding-bottom: 72px;
+  border-bottom: 1px solid #e0e0e0;
+}
+@media (min-width: 750px) {
+  .wrapper main .featured .border1 {
+    padding-bottom: 120px;
+  }
 }/*# sourceMappingURL=estilos.css.map */
