@@ -16,6 +16,16 @@ $border: #e0e0e0;
     padding: $tam1 $tam2; 
     font-weight: bolder;
 }
+@mixin borders(){
+    width: 90%;
+    padding-bottom: 72px;
+    border-bottom: 1px solid $border;    
+    @media (min-width: 750px){
+        padding-bottom: 120px;
+        width: 60%;
+        max-width: 1000px;
+    }   
+}
 
 body{
     padding: 0;
@@ -287,7 +297,12 @@ body{
                         font-size: 1.125em;
                         @include butao(1em, 1.75em);
                         background-color: #18a1c3;
-                        padding: 5px 15px;
+                        padding: 7px 15px;
+                        padding-top: 0;
+                        &:hover{
+                            background-color: #00bfee;
+                            cursor: pointer;
+                        }
                         span{
                             font-size: 2em;
                         }
@@ -297,7 +312,10 @@ body{
             .border1{
                 width: 50%;
                 padding-bottom: 72px;
-                @media (min-width: 750px){padding-bottom: 120px;}
+                @media (min-width: 750px){
+                    padding-bottom: 120px;
+                    max-width: 1000px;
+                }
                 border-bottom: 1px solid $border;
             }
         }
@@ -316,12 +334,23 @@ body{
                 padding: 0 10px;
                 margin: 0;
                 margin-bottom: 48px;
+                @media (min-width: 750px){
+                    font-size: 2.5em;
+                }
             }
             .press-content{
                 @include flex(column);
                 @media (min-width: 750px){flex-direction: row;}
                 max-width: 1200px;
                 margin-bottom: 120px;
+                .noticia-hover{
+                    color: $texto;
+                    text-decoration: none;
+                }
+                .noticia-hover:hover h2{
+                    color: $cor;
+                    cursor: pointer;
+                }
                 .noticia{
                     padding: 32px;
                     background-color: #ecfbfc;
@@ -350,6 +379,7 @@ body{
                     }
                     a{
                         button{
+                            &:hover{cursor: pointer;}
                             @include butao(1em, 1.75em);
                             background-color: transparent;
                             color: #000000;
@@ -383,10 +413,12 @@ body{
                         p{font-size: 0.9em;}
                         a{
                             button{
+                                &:hover{cursor: pointer;}
                                 @include butao(1em, 1.75em);
                                 background-color: transparent;
                                 color: #000000;
                                 padding: 0;
+                                font-size: 1.15em;
                                 span:nth-child(1){
                                     display: none;
                                     @media (min-width: 750px){display: inline-block;}
@@ -404,7 +436,12 @@ body{
                         font-size: 1.125em;
                         @include butao(1em, 1.75em);
                         background-color: #18a1c3;
-                        padding: 5px 15px;
+                        padding: 7px 15px;
+                        padding-top: 0;
+                        &:hover{
+                            background-color: #00bfee;
+                            cursor: pointer;
+                        }
                         span{
                             font-size: 2em;
                         }
@@ -412,13 +449,128 @@ body{
                 }
             }
             .border2{
-                width: 90%;
-                padding-bottom: 72px;
-                @media (min-width: 750px){
-                    padding-bottom: 120px;
-                    width: 60%;
+                @include borders();
+            }
+        }
+        .about-container{
+            width: 100%;
+            margin-bottom: 80px;
+            .about{
+                @include flex(column);
+                padding: 0 24px;
+                .about-items{
+                    @include flex(column);
+                    @media (min-width: 750px){
+                        flex-direction: row;
+                        img{
+                            max-height: 610px;
+                            max-width: 486px;
+                            margin-right: 132px;
+                        }
+                    }
+                    max-width: 1200px;
+                    margin-bottom: 72px;
+                    img{
+                        width: 100%;
+                        height: auto;
+                        @media (min-width: 750px) and (max-width: 1300px){
+                            width: 40%;
+                            margin-right: 80px;
+                        }
+                    }
+                    div{
+                        min-width: 40%;
+                        h2{
+                            margin-bottom: 24px;
+                            @media (min-width: 750px){font-size: 2.3em;}
+                        }
+                        p{
+                            color: $texto;
+                            font-size: 1.18em;
+                            margin-top: 0;
+                            margin-bottom: 30px;
+                            @media (min-width: 750px){font-size: 1.5em;}
+                        }
+                        a{
+                            button{
+                                &:hover{cursor: pointer;}
+                                @include butao(1em, 1.75em);
+                                background-color: transparent;
+                                color: #000000;
+                                padding: 0;
+                                font-size: 1.15em;
+                            }
+                        }
+                    }
                 }
-                border-bottom: 1px solid $border;
+                .border3{
+                    @include borders();
+                }
+            }   
+        }
+        .join-us-container{
+            width: 100%;
+            .join-us{
+                @include flex(column);
+                padding: 0 24px;
+                .join-us-items{
+                    @include flex(column);
+                    box-sizing: border-box;
+                    background-color: #ecfbfc;
+                    padding: 48px 32px;
+                    width: 100%;
+                    max-width: 1200px;
+                    @media (min-width: 900px){
+                        flex-direction: row;
+                        padding: 72px;
+                    }
+                    h1{
+                        margin: 0;
+                        margin-bottom: 32px;
+                        font-size: 2.3em;
+                        @media (min-width: 900px) and (max-width: 1249px){
+                            width: 70%;
+                            font-size: 2.5em;
+                            margin: 0;
+                            margin-right: 10px;
+                        }
+                        @media (min-width: 1250px){
+                            width: 70%;
+                            font-size: 4.2em;
+                            margin: 0;
+                        }
+                    }
+                    .explore{
+                        button{
+                            font-size: 0.80em;
+                            @include butao(1em, 1.75em);
+                            background-color: #18a1c3;
+                            padding: 7px 15px;
+                            padding-top: 0;
+                            @media (min-width: 500px){
+                                font-size: 1.125em;
+                            }
+                            @media (min-width: 900px) and (max-width: 1249px){
+                                min-width: 260px;
+                            }
+                            &:hover{
+                                background-color: #00bfee;
+                                cursor: pointer;
+                            }
+                            span{
+                                font-size: 2em;
+                            }
+                        }
+                    }
+                }
+                .border4{@include borders();}
+                .info{
+                    max-width: 690px;
+                    font-size: 1.2em;
+                    margin: 72px 0;
+                    span{font-weight: bolder;}
+                    a{color: $cor;}
+                }
             }
         }
     }

@@ -386,7 +386,12 @@ body {
   padding: 1em 1.75em;
   font-weight: bolder;
   background-color: #18a1c3;
-  padding: 5px 15px;
+  padding: 7px 15px;
+  padding-top: 0;
+}
+.wrapper main .featured .container-see-stories .see-stories button:hover {
+  background-color: #00bfee;
+  cursor: pointer;
 }
 .wrapper main .featured .container-see-stories .see-stories button span {
   font-size: 2em;
@@ -399,6 +404,7 @@ body {
 @media (min-width: 750px) {
   .wrapper main .featured .border1 {
     padding-bottom: 120px;
+    max-width: 1000px;
   }
 }
 .wrapper main .press {
@@ -423,6 +429,11 @@ body {
   margin: 0;
   margin-bottom: 48px;
 }
+@media (min-width: 750px) {
+  .wrapper main .press h1:nth-child(1) {
+    font-size: 2.5em;
+  }
+}
 .wrapper main .press .press-content {
   display: flex;
   flex-direction: column;
@@ -435,6 +446,14 @@ body {
   .wrapper main .press .press-content {
     flex-direction: row;
   }
+}
+.wrapper main .press .press-content .noticia-hover {
+  color: #0f1d2b;
+  text-decoration: none;
+}
+.wrapper main .press .press-content .noticia-hover:hover h2 {
+  color: #c8102e;
+  cursor: pointer;
 }
 .wrapper main .press .press-content .noticia {
   padding: 32px;
@@ -484,6 +503,9 @@ body {
   background-color: transparent;
   color: #000000;
   padding: 0;
+}
+.wrapper main .press .press-content .noticia a button:hover {
+  cursor: pointer;
 }
 .wrapper main .press .press-content .noticia a button span {
   display: none;
@@ -536,6 +558,10 @@ body {
   background-color: transparent;
   color: #000000;
   padding: 0;
+  font-size: 1.15em;
+}
+.wrapper main .press .press-content .container-noticias .noticias1 a button:hover {
+  cursor: pointer;
 }
 .wrapper main .press .press-content .container-noticias .noticias1 a button span:nth-child(1) {
   display: none;
@@ -564,7 +590,12 @@ body {
   padding: 1em 1.75em;
   font-weight: bolder;
   background-color: #18a1c3;
-  padding: 5px 15px;
+  padding: 7px 15px;
+  padding-top: 0;
+}
+.wrapper main .press .container-see-news .see-news button:hover {
+  background-color: #00bfee;
+  cursor: pointer;
 }
 .wrapper main .press .container-see-news .see-news button span {
   font-size: 2em;
@@ -578,5 +609,191 @@ body {
   .wrapper main .press .border2 {
     padding-bottom: 120px;
     width: 60%;
+    max-width: 1000px;
   }
+}
+.wrapper main .about-container {
+  width: 100%;
+  margin-bottom: 80px;
+}
+.wrapper main .about-container .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+}
+.wrapper main .about-container .about .about-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin-bottom: 72px;
+}
+@media (min-width: 750px) {
+  .wrapper main .about-container .about .about-items {
+    flex-direction: row;
+  }
+  .wrapper main .about-container .about .about-items img {
+    max-height: 610px;
+    max-width: 486px;
+    margin-right: 132px;
+  }
+}
+.wrapper main .about-container .about .about-items img {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 750px) and (max-width: 1300px) {
+  .wrapper main .about-container .about .about-items img {
+    width: 40%;
+    margin-right: 80px;
+  }
+}
+.wrapper main .about-container .about .about-items div {
+  min-width: 40%;
+}
+.wrapper main .about-container .about .about-items div h2 {
+  margin-bottom: 24px;
+}
+@media (min-width: 750px) {
+  .wrapper main .about-container .about .about-items div h2 {
+    font-size: 2.3em;
+  }
+}
+.wrapper main .about-container .about .about-items div p {
+  color: #0f1d2b;
+  font-size: 1.18em;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+@media (min-width: 750px) {
+  .wrapper main .about-container .about .about-items div p {
+    font-size: 1.5em;
+  }
+}
+.wrapper main .about-container .about .about-items div a button {
+  color: #ffffff;
+  background-color: #c8102e;
+  border: none;
+  padding: 1em 1.75em;
+  font-weight: bolder;
+  background-color: transparent;
+  color: #000000;
+  padding: 0;
+  font-size: 1.15em;
+}
+.wrapper main .about-container .about .about-items div a button:hover {
+  cursor: pointer;
+}
+.wrapper main .about-container .about .border3 {
+  width: 90%;
+  padding-bottom: 72px;
+  border-bottom: 1px solid #e0e0e0;
+}
+@media (min-width: 750px) {
+  .wrapper main .about-container .about .border3 {
+    padding-bottom: 120px;
+    width: 60%;
+    max-width: 1000px;
+  }
+}
+.wrapper main .join-us-container {
+  width: 100%;
+}
+.wrapper main .join-us-container .join-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+}
+.wrapper main .join-us-container .join-us .join-us-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #ecfbfc;
+  padding: 48px 32px;
+  width: 100%;
+  max-width: 1200px;
+}
+@media (min-width: 900px) {
+  .wrapper main .join-us-container .join-us .join-us-items {
+    flex-direction: row;
+    padding: 72px;
+  }
+}
+.wrapper main .join-us-container .join-us .join-us-items h1 {
+  margin: 0;
+  margin-bottom: 32px;
+  font-size: 2.3em;
+}
+@media (min-width: 900px) and (max-width: 1249px) {
+  .wrapper main .join-us-container .join-us .join-us-items h1 {
+    width: 70%;
+    font-size: 2.5em;
+    margin: 0;
+    margin-right: 10px;
+  }
+}
+@media (min-width: 1250px) {
+  .wrapper main .join-us-container .join-us .join-us-items h1 {
+    width: 70%;
+    font-size: 4.2em;
+    margin: 0;
+  }
+}
+.wrapper main .join-us-container .join-us .join-us-items .explore button {
+  font-size: 0.8em;
+  color: #ffffff;
+  background-color: #c8102e;
+  border: none;
+  padding: 1em 1.75em;
+  font-weight: bolder;
+  background-color: #18a1c3;
+  padding: 7px 15px;
+  padding-top: 0;
+}
+@media (min-width: 500px) {
+  .wrapper main .join-us-container .join-us .join-us-items .explore button {
+    font-size: 1.125em;
+  }
+}
+@media (min-width: 900px) and (max-width: 1249px) {
+  .wrapper main .join-us-container .join-us .join-us-items .explore button {
+    min-width: 260px;
+  }
+}
+.wrapper main .join-us-container .join-us .join-us-items .explore button:hover {
+  background-color: #00bfee;
+  cursor: pointer;
+}
+.wrapper main .join-us-container .join-us .join-us-items .explore button span {
+  font-size: 2em;
+}
+.wrapper main .join-us-container .join-us .border4 {
+  width: 90%;
+  padding-bottom: 72px;
+  border-bottom: 1px solid #e0e0e0;
+}
+@media (min-width: 750px) {
+  .wrapper main .join-us-container .join-us .border4 {
+    padding-bottom: 120px;
+    width: 60%;
+    max-width: 1000px;
+  }
+}
+.wrapper main .join-us-container .join-us .info {
+  max-width: 690px;
+  font-size: 1.2em;
+  margin: 72px 0;
+}
+.wrapper main .join-us-container .join-us .info span {
+  font-weight: bolder;
+}
+.wrapper main .join-us-container .join-us .info a {
+  color: #c8102e;
 }/*# sourceMappingURL=estilos.css.map */
