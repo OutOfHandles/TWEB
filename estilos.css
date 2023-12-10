@@ -885,7 +885,7 @@ body {
   color: #ffffff;
   background-color: #c8102e;
   border: none;
-  padding: 0.25em 0.9em;
+  padding: 0.65em 0.9em;
   font-weight: bolder;
   background-color: #18a1c3;
 }
@@ -974,6 +974,9 @@ body {
   .wrapper footer .footer-items .lista-fim {
     grid-column: 1/3;
     grid-row: 3/4;
+  }
+  .wrapper footer .footer-items .lista-fim li:nth-child(6) {
+    margin-top: 48px;
   }
   .wrapper footer .footer-items .footer-stats {
     grid-column: 3/4;
