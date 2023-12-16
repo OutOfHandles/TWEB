@@ -988,4 +988,114 @@ body {
     width: 80px;
     height: 80px;
   }
+}
+
+.form-container {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 350px;
+}
+@media (min-width: 380px) {
+  .form-container form {
+    border: 1px solid rgb(17, 131, 207);
+    border-radius: 10px;
+    padding: 15px;
+  }
+}
+.form-container form .Tipo {
+  margin-bottom: 25px;
+}
+.form-container form .quantia {
+  text-align: center;
+}
+.form-container form .quantia .Outra input {
+  outline: none;
+  margin-top: 10px;
+}
+.form-container form .info, .form-container form .info-mensal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.form-container form .info input, .form-container form .info-mensal input {
+  outline: none;
+  border: 1px solid rgb(17, 131, 207);
+  background-color: #e8f0fe;
+  border-radius: 10px;
+  padding: 10px;
+}
+.form-container form select {
+  margin-top: 10px;
+  width: 70%;
+  text-align: center;
+  padding: 5px;
+}
+.form-container form select option:nth-child(1) {
+  display: none;
+}
+.form-container form input[type=email] {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid rgb(17, 131, 207);
+  background-color: #e8f0fe;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+}
+.form-container form .partEmp {
+  margin-bottom: 15px;
+}
+.form-container form .btns-fim {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.form-container form .btns-fim input {
+  outline: none;
+  flex: 1;
+  box-sizing: border-box;
+  border: 1px solid rgb(17, 131, 207);
+  border-radius: 10px;
+  padding: 15px;
+}
+.form-container form .btns-fim input:nth-child(1) {
+  margin-right: 10px;
+}
+.form-container form .btns-fim input:nth-child(1):hover {
+  transition: 0.4s;
+  background-color: rgb(207, 28, 28);
+}
+.form-container form .btns-fim input:nth-child(2):hover {
+  transition: 0.4s;
+  background-color: rgb(3, 168, 3);
+}
+.form-container form .valor {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-container form .valor span {
+  text-align: center;
+  width: 100%;
+}
+.form-container form .valor span:nth-child(1) {
+  margin: 10px 0;
 }/*# sourceMappingURL=estilos.css.map */

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doar</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="form-container">
+        <form>
+            <div class="Tipo">
+                <label><input type="radio" name="tipo" checked id="Unico">Donativo Único</label>
+                <label><input type="radio" name="tipo" id="Mensal">Donativo Mensal</label>
+            </div>
+            <div class="quantia">
+                <label>Quantia: </label>
+                <label for="btnVinte"><input type="radio" name="quantia" checked id="btnVinte">20€</label>
+                <label for="btnQuarenta"><input type="radio" name="quantia" id="btnQuarenta">40€</label>
+                <label for="btnOitenta"><input type="radio" name="quantia" id="btnOitenta">80€</label>
+                <label for="btnOutra"><input type="radio" name="quantia" id="btnOutra">Outra Quantia</label>
+                <div class="Outra">
+                    <label>Outra Quantia: </label>
+                    <input type="number" min="2" id="InputOutra" name="outra_quantia">
+                </div>
+            </div>
+            <select required>
+                <option selected value="" disabled>Selecione um país para doar</option>
+                <option>Síria</option>
+                <option>Somália</option>
+                <option>Afeganistão</option>
+                <option>Etiópia</option>
+                <option>Zimbábue</option>
+                <option>Ucrânia</option>
+            </select><br>
+            <input type="email" placeholder="Email" name="email" id="email" required><br>
+            <div class="partEmp">
+                <label for="btnParticular"><input type="radio" name="tipoDoacao" id="btnParticular" checked>Particular</label>
+                <label for="btnEmpresa"><input type="radio" name="tipoDoacao" id="btnEmpresa">Empresa</label>
+            </div>
+            <div class="info">
+                <input type="text" required placeholder="Nome" id="nomeInput"  pattern="[A-Za-z]+"></input>
+                <input type="text" required placeholder="Apelido" id="apelidoInput" pattern="[A-Za-z]+"></input>
+                <input type="number" required placeholder="Telemóvel" id="telInput" min="0"></input>
+                <input type="number" required placeholder="NIF" id="nifInput" min="0"></input>
+            </div>
+            <div class="info-mensal">
+                <input type="text" placeholder="Rua" id="ruaInput" pattern="[A-Za-z]+"></input>
+                <input type="text" placeholder="Cidade" id="cidadeInput" pattern="[A-Za-z]+"></input>
+                <input type="number" placeholder="Código Postal" id="codigoPosInput" min="0"></input>
+                <input type="text" placeholder="País" id="paisInput" pattern="[A-Za-z]+"></input>
+            </div>
+            <div class="btns-fim">
+                <input type="reset" value="Apagar">
+                <input type="submit" value="Doar">
+            </div>
+            <div class="valor">
+                <span id="txt"></span>
+                <span id="txt1"></span>
+            </div>
+        </form>
+    </div>
+    <script src="logica.js"></script>
+</body>
+</html>
