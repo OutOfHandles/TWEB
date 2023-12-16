@@ -138,5 +138,4 @@ function submit(){
             txt1.textContent = 'O seu donativo permitirá alimentar '+ Math.floor(doacao.value/(30*1.5*2)) +' pessoas durante este mês';
         }   
     }
-    console.log(doacao.value);
 }
