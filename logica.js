@@ -91,21 +91,25 @@ btnMensal.addEventListener('click', function(){
 btnVinte.addEventListener('click', function(){
     outraContainer.style.visibility = 'hidden';
     doacao.value = 20;
+    txtReset();
 });
 
 btnQuarenta.addEventListener('click', function(){
     outraContainer.style.visibility = 'hidden';
     doacao.value = 40;
+    txtReset();
 });
 
 btnOitenta.addEventListener('click', function(){
     outraContainer.style.visibility = 'hidden';
     doacao.value = 80;
+    txtReset();
 });
 
 btnOutra.addEventListener('click', function(){
     outraContainer.style.visibility = 'visible';
     doacao.value = 0;
+    txtReset();
 });
 
 
@@ -115,6 +119,7 @@ btnParticular.addEventListener('click', function(){
     apelidoInput.required = true;
     nomeInput.placeholder = 'Nome';
     opcaoEP = 1;
+    txtReset();
 });
 
 btnEmpresa.addEventListener('click', function(){
@@ -123,6 +128,7 @@ btnEmpresa.addEventListener('click', function(){
     apelidoInput.style.display = 'none';
     nomeInput.placeholder = 'Nome da Empresa';
     opcaoEP = 0;
+    txtReset();
 });
 
 function txtReset(){
