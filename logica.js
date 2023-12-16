@@ -26,7 +26,6 @@ let opcaoEP = 1;
 // se prof mandar usar isto tirar comentario
 
 let info_mensal = document.querySelector('.info-mensal');
-let input_mensal = document.querySelectorAll('ruaInput, #cidadeInput, #codigoPosInput, #paisInput');
 
 let txt = document.querySelector('#txt');
 let txt1 = document.querySelector('#txt1');
@@ -34,6 +33,13 @@ let txt1 = document.querySelector('#txt1');
 window.onload = function(){
     outraContainer.style.visibility = 'hidden';
     info_mensal.style.display = 'none';
+}
+
+function mensal(estado){
+    let input_mensal = document.querySelectorAll('#ruaInput, #cidadeInput, #codigoPosInput, #paisInput');
+    input_mensal.forEach(function(id){
+        id.setAttribute('required', estado);
+    });
 }
 
 form.addEventListener('reset', function(){
@@ -48,7 +54,7 @@ form.addEventListener('reset', function(){
         nomeInput.placeholder = 'Nome';
         
         apelidoInput.required = true;
-        input_mensal.required = false;
+        mensal(false);
         doacao.value = 20;
         txtReset();
     }, 0);
@@ -69,14 +75,14 @@ form.addEventListener('submit', function(event){
 btnUnico.addEventListener('click', function(){
     opcaoDon = 1;
     info_mensal.style.display = 'none';
-    input_mensal.required = false;
+    mensal(false);
     txtReset();
 });
 
 btnMensal.addEventListener('click', function(){
     opcaoDon = 0;
     info_mensal.style.display = 'flex';
-    input_mensal.required = true;
+    mensal(true);
     txtReset();
 });
 
@@ -138,4 +144,5 @@ function submit(){
             txt1.textContent = 'O seu donativo permitirá alimentar '+ Math.floor(doacao.value/(30*1.5*2)) +' pessoas durante este mês';
         }   
     }
+    console.log(doacao.value);
 }
