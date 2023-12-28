@@ -17,14 +17,6 @@ let btnParticular = document.querySelector('#btnParticular');
 let btnEmpresa = document.querySelector('#btnEmpresa');
 let opcaoEP = 1;
 
-// let info = document.querySelector('.info');
-// let emailInput = document.querySelector('#email');
-// let nomeInput = document.querySelector('#nomeInput');
-// let apelidoInput = document.querySelector('#apelidoInput');
-// let telInput = document.querySelector('#telInput');
-// let nifInput = document.querySelector('#nifInput');
-// se prof mandar usar isto tirar comentario
-
 let info_mensal = document.querySelector('.info-mensal');
 
 let txt = document.querySelector('#txt');
@@ -77,6 +69,7 @@ btnUnico.addEventListener('click', function(){
     info_mensal.style.display = 'none';
     mensal(false);
     txtReset();
+    resetMensal();
 });
 
 btnMensal.addEventListener('click', function(){
@@ -136,6 +129,17 @@ function txtReset(){
     txt1.textContent = '';
 }
 
+function resetMensal(){
+    let ruaInput = document.querySelector('#ruaInput');
+    let cidadeInput = document.querySelector('#cidadeInput');
+    let codigoPosInput = document.querySelector('#codigoPosInput');
+    let paisInput = document.querySelector('#paisInput');
+    ruaInput.value = '';
+    cidadeInput.value = '';
+    codigoPosInput.value = '';
+    paisInput.value = '';
+}
+
 function submit(){
     txtReset();
     if(opcaoDon){
@@ -152,3 +156,5 @@ function submit(){
     }
     console.log(doacao.value);
 }
+
+doacao.oninput = txtReset;
