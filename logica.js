@@ -27,6 +27,38 @@ window.onload = function(){
     info_mensal.style.display = 'none';
 }
 
+function txtReset(){
+    txt.textContent = '';
+    txt1.textContent = '';
+}
+
+function resetMensal(){
+    let ruaInput = document.querySelector('#ruaInput');
+    let cidadeInput = document.querySelector('#cidadeInput');
+    let codigoPosInput = document.querySelector('#codigoPosInput');
+    let paisInput = document.querySelector('#paisInput');
+    ruaInput.value = '';
+    cidadeInput.value = '';
+    codigoPosInput.value = '';
+    paisInput.value = '';
+}
+
+function mensal(estado){
+    let input_mensal = document.querySelectorAll('#ruaInput, #cidadeInput, #codigoPosInput, #paisInput');
+    if(estado){
+        input_mensal.forEach(function(id){
+            id.setAttribute("required", "required");
+        });
+    }
+    else{
+        input_mensal.forEach(function(id){
+            id.removeAttribute("required");
+        });
+    }
+}
+
+doacao.oninput = txtReset;
+
 
 form.addEventListener('reset', function(){
     setTimeout(function(){
@@ -132,35 +164,3 @@ function submit(){
     }
     console.log(doacao.value);
 }
-
-function txtReset(){
-    txt.textContent = '';
-    txt1.textContent = '';
-}
-
-function resetMensal(){
-    let ruaInput = document.querySelector('#ruaInput');
-    let cidadeInput = document.querySelector('#cidadeInput');
-    let codigoPosInput = document.querySelector('#codigoPosInput');
-    let paisInput = document.querySelector('#paisInput');
-    ruaInput.value = '';
-    cidadeInput.value = '';
-    codigoPosInput.value = '';
-    paisInput.value = '';
-}
-
-function mensal(estado){
-    let input_mensal = document.querySelectorAll('#ruaInput, #cidadeInput, #codigoPosInput, #paisInput');
-    if(estado){
-        input_mensal.forEach(function(id){
-            id.setAttribute("required", "required");
-        });
-    }
-    else{
-        input_mensal.forEach(function(id){
-            id.removeAttribute("required");
-        });
-    }
-}
-
-doacao.oninput = txtReset;
