@@ -26,7 +26,7 @@ body {
   width: 96px;
   height: 36px;
 }
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   .wrapper nav .logo {
     margin-right: 30px;
   }
@@ -40,7 +40,7 @@ body {
   flex-wrap: wrap;
   font-family: "Futura", sans-serif;
 }
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   .wrapper nav .navigation {
     padding: 25px;
   }
@@ -60,7 +60,7 @@ body {
 .wrapper nav .navigation .nav-pc a:hover {
   color: #c8102e;
 }
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   .wrapper nav .navigation .nav-pc {
     display: flex;
     flex-direction: row;
@@ -73,7 +73,7 @@ body {
   align-items: center;
   margin-left: 30px;
 }
-@media screen and (max-width: 1279px) {
+@media (max-width: 1279px) {
   .wrapper nav .navigation .push {
     margin-left: auto;
   }
@@ -107,7 +107,7 @@ body {
   font-weight: 750;
   margin-left: 10px;
 }
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   .wrapper nav .navigation .push span {
     display: none;
   }
@@ -128,7 +128,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   .wrapper main .join {
     flex-direction: row;
   }
@@ -138,7 +138,7 @@ body {
   height: auto;
   max-width: 912px;
 }
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   .wrapper main .join .mulher {
     width: 61vw;
   }
@@ -155,25 +155,25 @@ body {
   margin-top: -24px;
   padding: 4.5%;
 }
-@media screen and (min-width: 351px) and (max-width: 799px) {
+@media (min-width: 351px) and (max-width: 799px) {
   .wrapper main .join .gift {
     margin-left: 24px;
     margin-right: 24px;
   }
 }
-@media screen and (max-width: 899px) and (min-width: 800px) {
+@media (max-width: 899px) and (min-width: 800px) {
   .wrapper main .join .gift {
     margin-left: 24px;
     margin-right: 24px;
     padding: 3.5%;
   }
 }
-@media screen and (min-width: 900px) and (max-width: 1299px) {
+@media (min-width: 900px) and (max-width: 1299px) {
   .wrapper main .join .gift {
     padding: 28px;
   }
 }
-@media screen and (min-width: 1300px) {
+@media (min-width: 1300px) {
   .wrapper main .join .gift {
     box-sizing: border-box;
     position: relative;
@@ -216,7 +216,7 @@ body {
     padding: 64px 0;
   }
 }
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   .wrapper main .container-global {
     border-bottom: 1px solid #e0e0e0;
     border-top: 1px solid #e0e0e0;
@@ -229,7 +229,7 @@ body {
   margin-top: 0;
   margin-bottom: 64px;
 }
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   .wrapper main .container-global h1:nth-child(1) {
     font-size: 2.6em;
   }
