@@ -27,19 +27,6 @@ window.onload = function(){
     info_mensal.style.display = 'none';
 }
 
-function mensal(estado){
-    let input_mensal = document.querySelectorAll('#ruaInput, #cidadeInput, #codigoPosInput, #paisInput');
-    if(estado){
-        input_mensal.forEach(function(id){
-            id.setAttribute("required", "required");
-        });
-    }
-    else{
-        input_mensal.forEach(function(id){
-            id.removeAttribute("required");
-        });
-    }
-}
 
 form.addEventListener('reset', function(){
     setTimeout(function(){
@@ -49,7 +36,7 @@ form.addEventListener('reset', function(){
         outraContainer.style.visibility = 'hidden';
         info_mensal.style.display = 'none';
         apelidoInput.style.display ='block';
-
+        
         nomeInput.placeholder = 'Nome';
         
         apelidoInput.required = true;
@@ -69,8 +56,6 @@ form.addEventListener('submit', function(event){
     }
 });
 
-
-
 btnUnico.addEventListener('click', function(){
     opcaoDon = 1;
     info_mensal.style.display = 'none';
@@ -85,8 +70,6 @@ btnMensal.addEventListener('click', function(){
     mensal(true);
     txtReset();
 });
-
-
 
 btnVinte.addEventListener('click', function(){
     outraContainer.style.visibility = 'hidden';
@@ -131,21 +114,7 @@ btnEmpresa.addEventListener('click', function(){
     txtReset();
 });
 
-function txtReset(){
-    txt.textContent = '';
-    txt1.textContent = '';
-}
 
-function resetMensal(){
-    let ruaInput = document.querySelector('#ruaInput');
-    let cidadeInput = document.querySelector('#cidadeInput');
-    let codigoPosInput = document.querySelector('#codigoPosInput');
-    let paisInput = document.querySelector('#paisInput');
-    ruaInput.value = '';
-    cidadeInput.value = '';
-    codigoPosInput.value = '';
-    paisInput.value = '';
-}
 
 function submit(){
     txtReset();
@@ -162,6 +131,36 @@ function submit(){
         }   
     }
     console.log(doacao.value);
+}
+
+function txtReset(){
+    txt.textContent = '';
+    txt1.textContent = '';
+}
+
+function resetMensal(){
+    let ruaInput = document.querySelector('#ruaInput');
+    let cidadeInput = document.querySelector('#cidadeInput');
+    let codigoPosInput = document.querySelector('#codigoPosInput');
+    let paisInput = document.querySelector('#paisInput');
+    ruaInput.value = '';
+    cidadeInput.value = '';
+    codigoPosInput.value = '';
+    paisInput.value = '';
+}
+
+function mensal(estado){
+    let input_mensal = document.querySelectorAll('#ruaInput, #cidadeInput, #codigoPosInput, #paisInput');
+    if(estado){
+        input_mensal.forEach(function(id){
+            id.setAttribute("required", "required");
+        });
+    }
+    else{
+        input_mensal.forEach(function(id){
+            id.removeAttribute("required");
+        });
+    }
 }
 
 doacao.oninput = txtReset;
