@@ -29,9 +29,16 @@ window.onload = function(){
 
 function mensal(estado){
     let input_mensal = document.querySelectorAll('#ruaInput, #cidadeInput, #codigoPosInput, #paisInput');
-    input_mensal.forEach(function(id){
-        id.setAttribute('required', estado);
-    });
+    if(estado){
+        input_mensal.forEach(function(id){
+            id.setAttribute("required", "required");
+        });
+    }
+    else{
+        input_mensal.forEach(function(id){
+            id.removeAttribute("required");
+        });
+    }
 }
 
 form.addEventListener('reset', function(){
