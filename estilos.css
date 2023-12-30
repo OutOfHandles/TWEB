@@ -1098,4 +1098,18 @@ body {
 }
 .form-container form .valor span:nth-child(1) {
   margin: 10px 0;
+}
+.form-container form #iban, .form-container form #periodo {
+  box-sizing: border-box;
+  margin-top: 10px;
+  width: 100%;
+  outline: none;
+  border: 1px solid rgb(17, 131, 207);
+  background-color: #e8f0fe;
+  border-radius: 10px;
+  padding: 10px;
+}
+.form-container form #periodo {
+  margin: 0;
+  margin-bottom: 10px;
 }/*# sourceMappingURL=estilos.css.map */

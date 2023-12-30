@@ -19,12 +19,24 @@ let opcaoEP = 1;
 
 let info_mensal = document.querySelector('.info-mensal');
 
+let metodo = document.querySelector('#metodo');
+let metodoDefault = document.querySelector('#metodoDefault');
+let metodoUnico = document.querySelectorAll('#paypal, #multibanco, #mbway')
+let metodoMensal = document.querySelector('#debito');
+let iban = document.querySelector('#iban');
+
+let periodo = document.querySelector('#periodo');
+
 let txt = document.querySelector('#txt');
 let txt1 = document.querySelector('#txt1');
 
 window.onload = function(){
     outraContainer.style.visibility = 'hidden';
     info_mensal.style.display = 'none';
+    metodoMensal.style.display = 'none';
+    metodoMensal.setAttribute("disabled", "disabled");
+    iban.style.display = 'none';
+    periodo.style.display = 'none';
 }
 
 function txtReset(){
@@ -74,6 +86,17 @@ form.addEventListener('reset', function(){
         apelidoInput.required = true;
         mensal(false);
         doacao.value = 20;
+        metodoUnico.forEach(function(id){
+            id.removeAttribute("disabled");
+            id.style.display = 'block';
+        });
+        metodoMensal.setAttribute("disabled", "disabled");
+        metodoMensal.style.display = 'none';
+        metodo.value = metodoDefault.value;
+        iban.style.display = 'none';
+        iban.removeAttribute("required");
+        periodo.style.display = 'none';
+        periodo.removeAttribute("required");
         txtReset();
     }, 0);
 });
@@ -92,15 +115,49 @@ btnUnico.addEventListener('click', function(){
     opcaoDon = 1;
     info_mensal.style.display = 'none';
     mensal(false);
-    txtReset();
     resetMensal();
+    metodoUnico.forEach(function(id){
+        id.removeAttribute("disabled");
+        id.style.display = 'block';
+    });
+    metodoMensal.setAttribute("disabled", "disabled");
+    metodoMensal.style.display = 'none';
+    metodo.value = metodoDefault.value;
+    iban.style.display = 'none';
+    iban.removeAttribute("required");
+    iban.value = '';
+    periodo.style.display = 'none';
+    periodo.removeAttribute("required");
+    periodo.value = '';
+    txtReset();
 });
 
 btnMensal.addEventListener('click', function(){
     opcaoDon = 0;
     info_mensal.style.display = 'flex';
     mensal(true);
+    metodoUnico.forEach(function(id){
+        id.setAttribute("disabled", "disabled");
+        id.style.display = 'none';
+    });
+    metodoMensal.removeAttribute("disabled");
+    metodoMensal.style.display = 'block';
+    metodo.value = metodoDefault.value;
+    periodo.style.display = 'block';
+    periodo.setAttribute("required", "required");
     txtReset();
+});
+
+metodo.addEventListener('change', function(){
+    if(metodo.value === 'debito'){
+        iban.style.display = 'block';
+        iban.setAttribute("required", "required");
+    }
+    else{
+        iban.style.display = 'none';
+        iban.removeAttribute("required");
+        iban.value = '';
+    }
 });
 
 btnVinte.addEventListener('click', function(){

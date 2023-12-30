@@ -13,6 +13,7 @@
                 <label><input type="radio" name="tipo" checked id="Unico">Donativo Único</label>
                 <label><input type="radio" name="tipo" id="Mensal">Donativo Mensal</label>
             </div>
+            <input type="number" placeholder="Período Coberto" id="periodo">
             <div class="quantia">
                 <label>Quantia: </label>
                 <label for="btnVinte"><input type="radio" name="quantia" checked id="btnVinte">20€</label>
@@ -50,6 +51,15 @@
                 <input type="number" placeholder="Código Postal" id="codigoPosInput" min="0"></input>
                 <input type="text" placeholder="País" id="paisInput" pattern="[A-Za-z]+"></input>
             </div>
+            <select required id="metodo">
+                <option selected value="" disabled id="metodoDefault">Método de pagamento</option>
+                <option>Cartão de Crédito</option>
+                <option id="paypal">Paypal</option>
+                <option id="multibanco">Multibanco</option>
+                <option id="mbway">MbWay</option>
+                <option id="debito" value="debito">Débito Direto</option>
+            </select>
+            <input type="text" placeholder="Iban" pattern="[A-Z]{2}[0-9]{23}" id="iban">
             <div class="btns-fim">
                 <input type="reset" value="Apagar">
                 <input type="submit" value="Doar">
